@@ -8,21 +8,18 @@
     <meta name="viewport" content = "width=device-width, initial-scale=1.0">
     <!-- The above 3 meta tags *must* come first in the head;
     any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Portfolio">
+    <meta name="author" content="Rong Huangfu">
 	{% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.min.css' %}"
-              type = "text/css"/>
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.min.css' %}" type = "text/css"/>
 
-    <!-- addtional style information  -->
-    <link rel="stylesheet" href="{% static 'myapp/css/mysite_local.css' %}"
-              type = "text/css"/>
-    <link rel="stylesheet" href="{% static 'myapp/css/blog.css' %}"
-              type = "text/css"/>
+    <!-- additional style information  -->
+    <link rel="stylesheet" href="{% static 'myapp/css/mysite_header.css' %}" type = "text/css"/>
+    <link rel="stylesheet" href="{% static 'myapp/css/blog.css' %}" type = "text/css"/>
 
     <link rel="icon" href="{% static 'myapp/img/icon.png' %}">
 
-    <title>Code for Future</title>
+    <title>Rong Huangfu</title>
 
 	<style type="text/css">
 		html, body { height:100% }
@@ -32,46 +29,36 @@
 
 <body>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                  data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{% url 'home' %}">Code for Future</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse pull-right">
-          <ul class="nav navbar-nav">
-            <!--
-            <li class="active"><a href="#">Home</a></li>
-            -->
-            <li><a href="#research"> Research </a></li>
-            <li><a href="#teach"> Teach </a></li>
-            <li><a href="#award"> Award </a></li>
-            <li><a href="#resume"> Resume </a></li>
-            <li><a href="#contact"> Contact </a></li>
+        <a class="navbar-brand" href="{% url 'home' %}">Rong Huangfu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!--
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-            -->
-
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown"
+                 aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown07">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
     <div class="container">
@@ -97,7 +84,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% load staticfiles %}
-    <script src="{% static 'myapp/js/jquery.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery-3.3.1.min.js' %}"></script>
     <script>window.jQuery || document.write('<script src="{% static 'mysite/js/jquery.min.js' %}"><\/script>')</script>
     <script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'myapp/js/docs.min.js' %}"></script>
