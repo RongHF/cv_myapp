@@ -1,19 +1,22 @@
 {% block content %}
 
-
+    <center>
     <br />
     <h4>My personal website is currently under development.</h4>
+    <br />
 
+    {% load staticfiles %}
+    <p>
+    <img src="{% static 'myapp/img/IEA_Rong.JPG' %}" alt="IEA Rong" style="width:400px;">
+    </p>
 
 
     <h5>Rong Huangfu: rong.huangfu@auburn.edu
-
-
         (<a href="https://www.linkedin.com/in/ronghuangfu/">Linkedin</a>,
         <a href="https://www.researchgate.net/profile/Rong_Huangfu">ResearchGate</a>,
         <a href="https://scholar.google.com/citations?user=mB8zT8kAAAAJ&hl=en&oi=ao">Google Scholar</a>)
-
     </h5>
 
+    </center>
 
 {% endblock %}
