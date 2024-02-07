@@ -1,0 +1,66 @@
+{% block content %}
+
+    <script>
+    function setCurrentTime() {
+          var myDate = new Date();
+
+          let daysList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+          let monthsList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+
+          let date = myDate.getDate();
+          let month = monthsList[myDate.getMonth()];
+          let year = myDate.getFullYear();
+          let day = daysList[myDate.getDay()];
+
+          let today = `${month} ${date}, ${year} | ${day}`;
+
+          let hours = myDate.getHours();
+          let minutes = myDate.getMinutes().toString().padStart(2, '0');
+          let seconds = myDate.getSeconds();
+
+          let currentTime = `${hours}:${minutes}:${seconds}`;
+
+        document.getElementById('current-time-local').innerText = `${myDate}`;
+        document.getElementById('current-time-iso').innerText = `${myDate.toISOString()}`;
+
+        // bar code
+        //JsBarcode("#barcode", myDate.toISOString(), {
+        //      format: "CODE128",
+        //      displayValue: true,
+        //    });
+
+        var qr = new QRious({
+          element: document.getElementById('qrcode'),
+          value: myDate.toISOString(),
+          size: 200,
+        });
+
+    }
+
+
+
+        setInterval(function() {
+          setCurrentTime();
+        }, 2000);
+    </script>
+
+    <center>
+    <br />
+    <h4>Local Time: </h4>
+    <h5 id="current-time-local"></h5>
+    <br />
+    <h4>ISO Time: </h4>
+    <h5 id="current-time-iso"></h5>
+
+    <!-- <canvas id="barcode"></canvas> -->
+    <br>
+    <canvas id="qrcode"></canvas>
+
+
+
+    <br />
+
+    </center>
+
+{% endblock %}

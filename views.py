@@ -6,3 +6,6 @@ def index(request):
 
 def home(request):
     return render(request, 'myapp/myapp_home.html')
+
+def timebarcode(request):
+    return render(request, 'myapp/myapp_timebarcode.html')

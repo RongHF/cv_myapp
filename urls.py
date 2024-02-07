@@ -7,6 +7,7 @@ urlpatterns = [
     #url(r'^test/$', views.home),
     re_path(r'^$', views.index, name="home"),
     re_path(r'^test/$', views.home),
+    re_path(r'^timebarcode/$', views.timebarcode),
 
     # url(r'^Results/', views.index, name='index'),
 ]
